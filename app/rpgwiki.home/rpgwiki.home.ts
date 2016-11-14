@@ -8,7 +8,7 @@ import {ListService} from '../rpgwiki.shared/rpgwiki.list';
     <div *ngFor="let item of listSrv.list">{{item}}</div>`
 })
 export class HomeComponent {
-  listSrv:any;
+  listSrv:ListService;
   constructor(listSrv: ListService) {
       this.listSrv = listSrv;
       listSrv.addToList("Item " + (listSrv.list.length + 1));
